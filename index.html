@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Music Player</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="music-container">
+    <h1>🎶 My Music Player</h1>
+
+    <div class="player">
+      <div class="song-info">
+        <h2 id="title">Perfect</h2>
+        <p id="artist">Ed Sheeran</p>
+      </div>
+
+      <audio id="audio" src="songs/perfect.mp3"></audio>
+
+      <div class="controls">
+        <button id="prev">⏮</button>
+        <button id="play">▶</button>
+        <button id="next">⏭</button>
+      </div>
+
+      <div class="progress-container">
+        <input type="range" id="progress" value="0" step="1" min="0" max="100" />
+      </div>
+
+      <div class="volume">
+        <label for="volume">🔊</label>
+        <input type="range" id="volume" min="0" max="1" step="0.01" value="0.8" />
+      </div>
+    </div>
+
+    <div class="playlist">
+      <h3>🎵 Playlist</h3>
+      <ul id="playlist"></ul>
+      <input type="file" id="addSong" accept="audio/*" multiple />
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
